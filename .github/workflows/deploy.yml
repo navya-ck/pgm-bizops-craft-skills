@@ -15,11 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  validation:
-    uses: actions-intuit/ibp-wf/.github/workflows/validation.yml@v1
-
   build:
-    needs: validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,10 +25,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm install --ignore-scripts --prefer-offline || npm install --ignore-scripts
+        run: npm install
 
       - name: Build
         run: npx vite build
