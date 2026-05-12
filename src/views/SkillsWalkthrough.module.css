@@ -1,0 +1,374 @@
+.walkthrough {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header {
+  background: var(--section-header-bg);
+  color: var(--section-header-text);
+  padding: 12px 20px;
+  margin-bottom: 0;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--blue-mid);
+}
+
+/* ── Controls bar ─────────────────────────────────── */
+.controls {
+  background: var(--gray-50);
+  border-bottom: 1px solid var(--panel-border);
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.controlLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--gray-500);
+  white-space: nowrap;
+}
+
+/* Level pills */
+.levelPills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.levelPill {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--panel-border);
+  background: var(--white);
+  color: var(--gray-700);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+}
+
+.levelPill:hover {
+  border-color: var(--intuit-blue);
+  color: var(--intuit-blue);
+}
+
+.levelPillActive {
+  background: var(--intuit-navy);
+  border-color: var(--intuit-navy);
+  color: var(--white) !important;
+}
+
+/* Filter pills */
+.filterPills {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.filterPill {
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--panel-border);
+  background: var(--white);
+  color: var(--gray-700);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+}
+
+.filterPill:hover {
+  border-color: var(--intuit-blue);
+  color: var(--intuit-blue);
+}
+
+.filterPillActive {
+  background: var(--intuit-blue);
+  border-color: var(--intuit-blue);
+  color: var(--white) !important;
+}
+
+/* Expand / collapse */
+.expandControls {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.expandBtn {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--intuit-blue);
+  background: transparent;
+  border: 1px solid var(--intuit-blue);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+}
+
+.expandBtn:hover {
+  background: var(--intuit-blue);
+  color: var(--white);
+}
+
+/* ── Skill cards ─────────────────────────────────── */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillCard {
+  background: var(--white);
+  border: 1px solid var(--panel-border);
+  overflow: hidden;
+}
+
+.skillCardOpen {
+  border-color: var(--intuit-blue);
+}
+
+/* Header is now a button */
+.skillHeader {
+  background: var(--section-header-bg);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.skillHeader:hover {
+  background: #163352;
+}
+
+/* Colored letter chips — each skill gets a unique color */
+.skillId {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--white);
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+.skillId[data-chip="1"] { background: var(--chip-blue); }
+.skillId[data-chip="2"] { background: var(--chip-teal); }
+.skillId[data-chip="3"] { background: var(--chip-orange); }
+.skillId[data-chip="4"] { background: var(--chip-purple); }
+.skillId[data-chip="5"] { background: var(--chip-red); }
+.skillId[data-chip="6"] { background: var(--chip-green); }
+
+.skillNameGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.skillNameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skillName {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.jobFamilyBadge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--intuit-navy);
+  background: var(--blue-mid);
+  padding: 2px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.skillTagline {
+  color: var(--blue-mid);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.chevron {
+  color: var(--blue-mid);
+  font-size: 11px;
+  flex-shrink: 0;
+}
+
+/* ── Expandable body ────────────────────────────── */
+.skillBody {
+  border-top: 1px solid var(--row-divider);
+}
+
+/* Level callout bar */
+.levelCallout {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  background: #f0f4f8;
+  border-bottom: 1px solid var(--row-divider);
+  padding: 8px 18px;
+}
+
+.levelCalloutLabel {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--intuit-navy);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.levelCalloutText {
+  font-size: 12px;
+  color: var(--gray-700);
+  line-height: 1.5;
+}
+
+.bodyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.leftCol {
+  padding: 18px 20px;
+  border-right: 1px solid var(--row-divider);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.rightCol {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--intuit-blue);
+  margin-bottom: 6px;
+}
+
+.bodyText {
+  font-size: 13px;
+  color: var(--gray-800);
+  line-height: 1.6;
+}
+
+/* ── Behavior boxes ──────────────────────────────── */
+.heroBox {
+  background: var(--green-light);
+  border-left: 3px solid var(--green-dark);
+  padding: 10px 14px;
+}
+
+.heroLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--green-dark);
+  margin-bottom: 5px;
+}
+
+.antiHeroBox {
+  background: var(--orange-light);
+  border-left: 3px solid var(--orange-dark);
+  padding: 10px 14px;
+}
+
+.antiHeroLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--orange-dark);
+  margin-bottom: 5px;
+}
+
+.promptBox {
+  background: var(--intuit-blue-light);
+  border-left: 3px solid var(--intuit-blue);
+  padding: 10px 14px;
+}
+
+.promptLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--intuit-navy);
+  margin-bottom: 5px;
+}
+
+.promptText {
+  font-size: 13px;
+  color: var(--intuit-navy);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .bodyGrid {
+    grid-template-columns: 1fr;
+  }
+  .leftCol {
+    border-right: none;
+    border-bottom: 1px solid var(--row-divider);
+  }
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .expandControls {
+    margin-left: 0;
+  }
+}

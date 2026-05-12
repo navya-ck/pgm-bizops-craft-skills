@@ -1,0 +1,370 @@
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 100%;
+}
+
+/* ── Header ──────────────────────────────────────── */
+.header {
+  background: var(--section-header-bg);
+  padding: 20px 24px 18px;
+}
+
+.headerInner {
+  max-width: 780px;
+}
+
+.headerMeta {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blue-mid);
+  margin-bottom: 6px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--blue-mid);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* ── Controls bar ────────────────────────────────── */
+.controls {
+  background: #f5f7f9;
+  border-bottom: 1px solid var(--panel-border);
+  padding: 12px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Persona toggle */
+.personaToggle {
+  display: flex;
+  gap: 4px;
+}
+
+.personaBtn {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid var(--panel-border);
+  background: var(--white);
+  color: var(--gray-700);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+}
+
+.personaBtn:hover {
+  border-color: var(--gray-500);
+}
+
+.personaBtnActive {
+  background: var(--intuit-navy);
+  border-color: var(--intuit-navy);
+  color: var(--white) !important;
+}
+
+.personaBtnActiveMaya {
+  background: #1a6b3a;
+  border-color: #1a6b3a;
+  color: var(--white) !important;
+}
+
+.personaBtnActiveJordan {
+  background: #8b3a1e;
+  border-color: #8b3a1e;
+  color: var(--white) !important;
+}
+
+/* Day nav */
+.dayNav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.dayBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 6px 14px;
+  border: 1px solid var(--panel-border);
+  background: var(--white);
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+  min-width: 80px;
+}
+
+.dayBtn:hover {
+  border-color: var(--intuit-blue);
+}
+
+.dayBtnActive {
+  background: var(--intuit-navy);
+  border-color: var(--intuit-navy);
+}
+
+.dayBtnActive .dayStep,
+.dayBtnActive .dayLabel,
+.dayBtnActive .daySub {
+  color: var(--white) !important;
+}
+
+.dayStep {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-400);
+}
+
+.dayLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gray-800);
+}
+
+.daySub {
+  font-size: 10px;
+  color: var(--gray-500);
+}
+
+/* ── Split panel ─────────────────────────────────── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  flex: 1;
+}
+
+.splitFocused {
+  grid-template-columns: 1fr;
+}
+
+.panel {
+  padding: 20px 22px;
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.panelMaya {
+  border-right: 1px solid var(--panel-border);
+  background: #f9fdfb;
+}
+
+.panelJordan {
+  background: #fdfaf8;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.personaChip {
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+}
+
+.personaChip[data-persona="maya"] {
+  background: #d4edda;
+  color: #1a6b3a;
+}
+
+.personaChip[data-persona="jordan"] {
+  background: #fde8e0;
+  color: #8b3a1e;
+}
+
+.personaRole {
+  font-size: 11px;
+  color: var(--gray-500);
+  font-style: italic;
+}
+
+.panelHeadline {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--intuit-navy);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--row-divider);
+}
+
+/* ── Beats ───────────────────────────────────────── */
+.beats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.beat {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 2px;
+}
+
+.beatTime {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--gray-500);
+  padding-top: 2px;
+  line-height: 1.4;
+}
+
+.beatText {
+  font-size: 13px;
+  color: var(--gray-800);
+  line-height: 1.65;
+}
+
+/* Beat types */
+.beat_action {
+  background: var(--white);
+  border-left: 3px solid var(--intuit-blue);
+}
+
+.beat_prompt {
+  background: #eef4fb;
+  border-left: 3px solid var(--intuit-blue);
+}
+
+.beat_prompt .beatText {
+  font-style: italic;
+  color: var(--intuit-navy);
+}
+
+.beat_moment {
+  background: #f0faf4;
+  border-left: 3px solid var(--green-dark);
+}
+
+.beat_moment .beatText {
+  color: #1a6b3a;
+  font-weight: 500;
+}
+
+.beat_gap {
+  background: #fff7f4;
+  border-left: 3px solid #c0613a;
+}
+
+.beat_gap .beatText {
+  color: #7a3520;
+}
+
+/* ── Reveal (Thursday only) ──────────────────────── */
+.reveal {
+  background: var(--intuit-navy);
+  padding: 32px 28px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.revealLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blue-mid);
+  margin-bottom: 16px;
+}
+
+.revealText {
+  font-size: 14px;
+  color: rgba(255,255,255,0.8);
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 14px;
+}
+
+.revealSignal {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--white);
+  padding-left: 16px;
+  border-left: 3px solid var(--chip-teal);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* ── Footer nav ──────────────────────────────────── */
+.footerNav {
+  padding: 14px 20px;
+  border-top: 1px solid var(--panel-border);
+  background: #f5f7f9;
+}
+
+.footerNavInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerNavBtn {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--intuit-blue);
+  background: transparent;
+  border: 1px solid var(--intuit-blue);
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.12s;
+}
+
+.footerNavBtn:hover {
+  background: var(--intuit-blue);
+  color: var(--white);
+}
+
+.footerNavDay {
+  font-size: 12px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+@media (max-width: 700px) {
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .panelMaya {
+    border-right: none;
+    border-bottom: 1px solid var(--panel-border);
+  }
+  .beat {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

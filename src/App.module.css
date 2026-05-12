@@ -1,0 +1,55 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--body-bg);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 28px 28px;
+}
+
+.footer {
+  background: var(--navy);
+  color: var(--blue-mid);
+  text-align: center;
+  padding: 16px 24px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dot {
+  opacity: 0.4;
+}
+
+.claudeBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--blue-mid);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 3px 8px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 3px;
+  transition: border-color 0.15s, color 0.15s;
+  letter-spacing: 0.2px;
+}
+
+.claudeBadge:hover {
+  border-color: rgba(255,255,255,0.3);
+  color: var(--white);
+}
+
+.claudeIcon {
+  font-size: 10px;
+  color: #d97a45;
+}

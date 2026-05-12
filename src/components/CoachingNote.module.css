@@ -1,0 +1,328 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Signal banner ─────────────────────────────── */
+.signalBanner {
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  color: var(--white);
+  border-left: 5px solid rgba(255,255,255,0.3);
+}
+
+.floor    { background: var(--intuit-navy); }
+.judgment { background: #1e3c6b; }
+.both     { background: #162d54; }
+
+.signalIcon {
+  font-size: 26px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.signalLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--blue-mid);
+  margin-bottom: 4px;
+}
+
+.signalText {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+.signalMeta {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.metaChip {
+  background: rgba(255,255,255,0.12);
+  color: var(--blue-mid);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+/* ── Finding card ──────────────────────────────── */
+.findingCard {
+  background: var(--white);
+  border: 1px solid var(--panel-border);
+  overflow: hidden;
+}
+
+.findingHeader {
+  background: var(--section-header-bg);
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skillBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  height: 26px;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+  background: var(--intuit-blue);
+}
+
+.skillName {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.findingBody {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Rows ──────────────────────────────────────── */
+.row {
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--row-divider);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.rowLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.rowIcon {
+  font-size: 12px;
+}
+
+.rowText {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+/* Row color variants */
+.row_blue   .rowLabel { color: var(--intuit-blue); }
+.row_navy   .rowLabel { color: var(--intuit-navy); }
+.row_green  .rowLabel { color: var(--green-dark); }
+.row_green  { background: #f8fdfb; }
+.row_orange .rowLabel { color: var(--orange-dark); }
+.row_orange { background: #fffaf7; }
+.row_purple .rowLabel { color: #5b3a8e; }
+.row_purple { background: #faf8ff; }
+
+/* ── One action ────────────────────────────────── */
+.actionRow {
+  background: var(--amber-light);
+  border-top: 2px solid #F9A825;
+  padding: 12px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.actionLabel {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--amber-dark);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.actionIcon {
+  font-size: 13px;
+}
+
+.actionText {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--amber-dark);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ── Summary card ──────────────────────────────── */
+.summaryCard {
+  background: var(--white);
+  border: 1px solid var(--panel-border);
+  overflow: hidden;
+}
+
+.summaryHeader {
+  background: var(--section-header-bg);
+  padding: 10px 18px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--white);
+  border-bottom: 1px solid var(--panel-border);
+}
+
+.summaryGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+.summaryRow {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 12px;
+  padding: 11px 18px;
+  border-bottom: 1px solid var(--row-divider);
+  align-items: baseline;
+}
+
+.summaryLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--gray-600);
+}
+
+.summaryValue {
+  font-size: 13px;
+  color: var(--gray-800);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pgmSignalRow {
+  padding: 12px 18px;
+  background: var(--intuit-blue-light);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-left: 3px solid var(--intuit-blue);
+}
+
+.pgmSignalLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--intuit-navy);
+}
+
+.pgmSignalText {
+  font-size: 13.5px;
+  color: var(--intuit-navy);
+  font-weight: 500;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Footer ────────────────────────────────────── */
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.resetBtn {
+  background: none;
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.resetBtn:hover {
+  border-color: var(--intuit-navy);
+  color: var(--intuit-navy);
+}
+
+.copyBtn {
+  background: none;
+  border: 1px solid var(--intuit-blue);
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--intuit-blue);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.copyBtn:hover {
+  background: var(--intuit-blue);
+  color: var(--white);
+}
+
+.copyBtnDone {
+  background: var(--green-dark) !important;
+  border-color: var(--green-dark) !important;
+  color: var(--white) !important;
+}
+
+@media (max-width: 600px) {
+  .signalBanner {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .signalMeta {
+    margin-left: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .summaryRow {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .actionRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

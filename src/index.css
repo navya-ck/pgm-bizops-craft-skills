@@ -1,0 +1,77 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Intuit palette from screenshot */
+  --intuit-navy: #0D2240;
+  --intuit-navy-hover: #0a1b33;
+  --intuit-blue: #236cad;
+  --intuit-blue-light: #e8f1f8;
+  --intuit-blue-mid: #b3d0e8;
+
+  /* Keep existing for output component reuse */
+  --navy: #0D2240;
+  --navy-dark: #0a1b33;
+  --blue: #236cad;
+  --blue-light: #e8f1f8;
+  --blue-mid: #b3d0e8;
+  --green-light: #E2EFDA;
+  --green-dark: #375623;
+  --amber-light: #FFF2CC;
+  --amber-dark: #7F6000;
+  --orange-light: #FCE4D6;
+  --orange-dark: #843C0C;
+
+  --white: #ffffff;
+  --body-bg: #ffffff;
+  --gray-50: #f5f7f9;
+  --gray-100: #f0f2f4;
+  --gray-200: #e2e6ea;
+  --gray-300: #cdd2d8;
+  --gray-600: #6b7280;
+  --gray-800: #1f2937;
+
+  --panel-border: #d1d9e0;
+  --row-divider: #edf0f3;
+  --section-header-bg: #0D2240;
+  --section-header-text: #ffffff;
+
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  /* Letter chip colors matching screenshot */
+  --chip-blue:   #236cad;
+  --chip-teal:   #0d8a7a;
+  --chip-orange: #e06c1a;
+  --chip-purple: #6b35a8;
+  --chip-red:    #c0392b;
+  --chip-green:  #27824f;
+  --chip-gray:   #6b7280;
+  --chip-yellow: #b8860b;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--body-bg);
+  color: var(--gray-800);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
