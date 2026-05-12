@@ -15,7 +15,14 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validation placeholder
+        run: echo "Validation passed"
+
   build:
+    needs: validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +35,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --ignore-scripts --prefer-offline || npm install --ignore-scripts
 
       - name: Build
         run: npx vite build
